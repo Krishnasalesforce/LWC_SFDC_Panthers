@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Input Values" icon-name="standard:address">
+        <lightning-layout vertical-align="center">
+            <lightning-layout-item padding="around-small">
+                {krishna} <br/>
+                {name} <br/>
+                {phone} <br/>
+                <template if:true={name}>
+                    {name}
+                </template> 
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <lightning-formatted-text value={userId}></lightning-formatted-text>
+            </lightning-layout-item>
+            
+          
+        </lightning-layout>
+        <lightning-layout vertical-align="center">
+            <lightning-layout-item padding="around-small">
+                <lightning-button label="call JS" variant="brand" onclick={handleClick} >
+
+                </lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

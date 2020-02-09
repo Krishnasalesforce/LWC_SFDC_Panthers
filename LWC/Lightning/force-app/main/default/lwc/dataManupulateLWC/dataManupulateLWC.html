@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Create Records" icon-name="standard:lead">
+        <div class="slds-p-around_small slds-m-around_medium">
+            <lightning-input label="Id" disabled value={accountId}></lightning-input>
+            <lightning-input label="Name" value={name} onchange={handleNameChange} ></lightning-input>
+            
+            <br/>
+            <lightning-button label="Create Account" variant="brand"
+            onclick={createAccount} ></lightning-button>
+        </div>        
+    </lightning-card>
+
+    <lightning-card title="Update Records" icon-name="standard:lead">
+        <div class="slds-p-around_small slds-m-around_medium">
+            <lightning-input label="Id" disabled value={accountUId}></lightning-input>
+            <lightning-input label="Name" value={name} onchange={handleUNameChange}  ></lightning-input>
+            <lightning-input label="Description" value={active} onchange={handleUAChange}  ></lightning-input>
+            
+            <br/>
+            <lightning-button label="Update Account" variant="brand"
+            onclick={updateAccount} ></lightning-button>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Delete Records" icon-name="standard:lead">
+        <lightning-input label="Id" disabled value={accountDId}></lightning-input>
+        <br/>
+        <lightning-button variant="destructive" 
+        label="Delete"
+        icon-name="utility:delete"
+        icon-position="right"
+        onclick={deleteEvent}>
+        
+    </lightning-button>
+    </lightning-card>
+</template>

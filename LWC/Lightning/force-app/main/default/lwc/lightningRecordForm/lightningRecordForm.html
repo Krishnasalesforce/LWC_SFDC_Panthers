@@ -1,0 +1,79 @@
+<template>
+    <lightning-card title="Lightning Record Form - CREATE" icon-name="standard:account">
+        <div class="slds-p-around_small">
+            <lightning-record-form
+                object-api-name={objectApiName}
+                layout-type="Compact"
+                columns="2"
+                mode="edit"
+                onsuccess={handleSuccess}>
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Lightning Record Form View/Ready Only." icon-name="standard:account">
+        <div class="slds-p-around_small">
+            <lightning-record-form
+                record-id={recordId}
+                object-api-name={objectApiName}
+                layout-type="Compact"
+                columns="2"
+                mode="view">
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Lightning Record Form EDIT" icon-name="standard:account">
+        <div class="slds-p-around_small">
+            <lightning-record-form
+                record-id={recordId}
+                object-api-name={objectApiName}
+                columns="2"
+                mode="edit"
+                fields={fields}
+                onsuccess={handleSuccess}>
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Lightning Record edit Form" icon-name="standard:account">
+        <div class="slds-p-around_small">
+            <lightning-record-edit-form record-id={recordId}
+            object-api-name={objectApiName}>
+        <lightning-messages>
+        </lightning-messages>
+        <lightning-output-field field-name="AccountId">
+        </lightning-output-field>
+        <lightning-input-field field-name="Name">
+        </lightning-input-field>
+        <lightning-input-field field-name="Industry">
+        </lightning-input-field>
+        <lightning-input-field field-name="ParentId">
+        </lightning-input-field>
+        <lightning-button
+            class="slds-m-top_small"
+            variant="brand"
+            type="submit"
+            label="UPDATE ACCOUNT">
+        </lightning-button>
+    </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+
+
+    <lightning-card title="Lightning Record View Form" icon-name="standard:account">
+        <div class="slds-p-around_small">
+            <lightning-record-view-form
+                record-id={recordId}
+                object-api-name={objectApiName}>
+            <div class="slds-box">
+                <lightning-output-field field-name="Name">
+                </lightning-output-field>
+                <lightning-output-field field-name="Industry">
+                </lightning-output-field>
+            </div>
+        </lightning-record-view-form>
+        </div>
+    </lightning-card>
+
+</template>

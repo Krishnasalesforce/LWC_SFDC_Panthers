@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Design Attribute Demo" icon-name="custom:custom5">
+        <div class="slds-p-around_x-small">
+            <p>{greeting} </p>
+            <p>{heading}</p>
+            <p>{message}</p>
+            <p>{label.LWCLabel}</p>
+            <p><img src={label.trailhead} /></p>
+            <p>UserId: {label.userId}</p>
+            <p>isGuestUser: {label.isGuestUser}</p>
+            <p>Account: {label.ACCOUNT_OBJECT.objectApiName}</p>
+            <p>Account.FIELD: {label.NAME_FIELD.Name}</p>
+            <p>LANG: {label.LANG}</p>
+            <p>locale: {label.locale}</p>
+            <p>currency: {label.currency}</p>
+            <p>firstDayOfWeek: {label.firstDayOfWeek}</p>
+            <p>timeZone: {label.timeZone}</p>
+            <p>DIR: {label.DIR}</p>
+            <p lang={label.lang} dir={label.DIR}>Modelo de manutenção</p>
+        </div>
+        
+    </lightning-card>
+</template>

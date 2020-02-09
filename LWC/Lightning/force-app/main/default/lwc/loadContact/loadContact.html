@@ -1,0 +1,23 @@
+<template>
+    <lightning-card
+        title="WireGetFieldValue"
+        icon-name="standard:contact">
+        <template if:true={contact}>
+            <div class="slds-m-around_medium">
+                <p>
+                    <lightning-formatted-text 
+                    value={fname} 
+                    >
+                </lightning-formatted-text>
+                </p>
+                <p>
+                    <lightning-formatted-text 
+                    value={lname} 
+                    >
+                </lightning-formatted-text>
+                </p>
+                
+            </div>
+        </template>
+    </lightning-card>
+</template>

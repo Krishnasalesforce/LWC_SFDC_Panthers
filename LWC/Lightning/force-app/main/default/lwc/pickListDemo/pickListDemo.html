@@ -1,0 +1,25 @@
+<template>
+    <div class="slds-p-around_small">
+        <lightning-card title="Picklist Demo" icon-name="custom:custom5">
+            <lightning-combobox name="Account Source" label="Account Source"
+            value={val} placeholder="---SELECT---"
+            options={pickListAccValues} onchange={onChange}></lightning-combobox>
+        </lightning-card>
+    </div>
+
+    <div class="slds-p-around_small">
+        <lightning-card title="Picklist RT Demo" icon-name="custom:custom6">
+            <lightning-combobox name="Account Source" label="Account Source"
+            value={valik} placeholder="---SELECT---"
+            options={pickListValueByRTAccSource} ></lightning-combobox>
+        </lightning-card>
+    </div>
+
+    <div class="slds-p-around_small">
+        <lightning-card title="Picklist RT Demo" icon-name="custom:custom7">
+            <lightning-combobox name="Account Industry" label="Account Industry"
+            value={vali} placeholder="---SELECT---"
+            options={pickListValueByRT} ></lightning-combobox>
+        </lightning-card>
+    </div>
+</template>

@@ -1,0 +1,56 @@
+<template>
+    <lightning-card title="Contact List" icon-name="standard:contact">
+        <lightning-layout vertical-align="center">
+            <lightning-layout-item padding="around small">
+                <lightning-input label="Find Contacts" value={searchcontact} onchange={handleChange}>
+
+                </lightning-input>    
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout vertical-align="center">
+            <template for:each={contacts} for:item="contact">
+                <lightning-layout-item key={contact.key} padding="around small">
+                    <p> <lightning-formatted-text value={contact.Name}></lightning-formatted-text></p>
+                    <p> <lightning-formatted-email value={contact.Email}></lightning-formatted-email></p>
+                    <p><lightning-formatted-phone value={contact.Phone}></lightning-formatted-phone></p>
+                </lightning-layout-item>    
+            </template>
+        </lightning-layout>
+    </lightning-card>
+
+    <lightning-card title="Account List" icon-name="standard:account">
+        <lightning-layout vertical-align="center">
+            <lightning-layout-item padding="around small">
+                <lightning-input label="Find Accounts" value={searchaccount} onchange={handleAccountChange}>
+
+                </lightning-input>  
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout vertical-align="center">
+            <lightning-layout-item padding="around small">
+                <lightning-button label="Find accounts" variant="brand" onclick={findAccounts} ></lightning-button>
+            </lightning-layout-item>    
+        </lightning-layout>
+        <lightning-layout vertical-align="center">
+            <template for:each={accounts} for:item="account">
+                <c-account-title key={account.Id} onselect={handleselectRec} account={account}></c-account-title>
+                <!--<lightning-layout-item key={account.key} padding="around small">
+                    <p> <lightning-formatted-text value={account.Name}></lightning-formatted-text></p>
+                    <p> <lightning-formatted-email value={account.Industry}></lightning-formatted-email></p>
+                    <p><lightning-formatted-phone value={account.Phone}></lightning-formatted-phone></p>
+                </lightning-layout-item>   --> 
+            </template>
+            <!--<lightning-layout-item padding="around small">
+                <c-account-title></c-account-title>
+            </lightning-layout-item>-->
+        </lightning-layout>
+        <lightning-layout>
+            <lightning-layout-item padding="around-small">
+                <template if:true={selectAccount}>
+                      <p> {selectAccount.Name}</p>  
+                       <p> {selectAccount.Phone}</p>
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

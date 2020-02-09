@@ -1,0 +1,50 @@
+<template>
+    <lightning-card title="Logical Operations" icon-name="custom:custom9">
+        <lightning-layout-item vertical-align="center">
+            <lightning-layout-item padding="around-small">
+                {greeting}
+            </lightning-layout-item>
+            <template if:true={message}>   
+                <lightning-layout-item padding="around-small">
+                    {message}
+                </lightning-layout-item>
+            </template>
+        </lightning-layout-item>
+    </lightning-card>
+
+    <lightning-card title="for Loop" icon-name="standard:address">
+        <lightning-layout-item vertical-align="center">
+            <template for:each={contacts} for:item="contact" for:index="index">
+                <p key={contact.Id}>
+                    {index}
+                </p> 
+                {contact.Name} 
+                {contact.Id}       
+            </template> 
+        </lightning-layout-item>
+    </lightning-card>
+    <lightning-card title="Map" icon-name="standard:currency_input">    
+         <br></br>   
+        <lightning-layout-item padding="around-small">
+            Krishna - {records}
+            <template for:each={records} for:item="item" for:index="index">
+                {item.key} ======> {item.value} &nbsp; &nbsp;      
+            </template> 
+        </lightning-layout-item>
+
+        <br></br>  
+        <lightning-layout-item padding="around-small">
+            <lightning-button label="call APEX" variant="brand" onclick={handleClick} ></lightning-button>
+        </lightning-layout-item> 
+        <br></br>  
+        <lightning-layout-item padding="around-small">
+            <template for:each={maps} for:item="item" for:index="index">
+                {item.key} ======> {item.value} &nbsp; &nbsp;      
+            </template> 
+        </lightning-layout-item>  
+    </lightning-card>
+
+    
+        <c-input-format></c-input-format>
+    
+</template>

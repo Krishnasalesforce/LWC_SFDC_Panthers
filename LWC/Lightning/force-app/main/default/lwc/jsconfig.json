@@ -1,0 +1,77 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/accountTitle": [
+                "accountTitle/accountTitle.js"
+            ],
+            "c/cLI_Krish_Hello": [
+                "cLI_Krish_Hello/cLI_Krish_Hello.js"
+            ],
+            "c/contactListDemo": [
+                "contactListDemo/contactListDemo.js"
+            ],
+            "c/dataManupulateLWC": [
+                "dataManupulateLWC/dataManupulateLWC.js"
+            ],
+            "c/designLWCDemo": [
+                "designLWCDemo/designLWCDemo.js"
+            ],
+            "c/inputFormat": [
+                "inputFormat/inputFormat.js"
+            ],
+            "c/lifeCycleHooks": [
+                "lifeCycleHooks/lifeCycleHooks.js"
+            ],
+            "c/lightningRecordForm": [
+                "lightningRecordForm/lightningRecordForm.js"
+            ],
+            "c/loadContact": [
+                "loadContact/loadContact.js"
+            ],
+            "c/logicalLWC": [
+                "logicalLWC/logicalLWC.js"
+            ],
+            "c/miscSharedJavaScript": [
+                "miscSharedJavaScript/miscSharedJavaScript.js"
+            ],
+            "c/pageReference": [
+                "pageReference/pageReference.js"
+            ],
+            "c/parentPaginator": [
+                "parentPaginator/parentPaginator.js"
+            ],
+            "c/pickListDemo": [
+                "pickListDemo/pickListDemo.js"
+            ],
+            "c/resourceDemo": [
+                "resourceDemo/resourceDemo.js"
+            ],
+            "c/showToast": [
+                "showToast/showToast.js"
+            ],
+            "c/simpleEvent": [
+                "simpleEvent/simpleEvent.js"
+            ],
+            "c/testingNinja": [
+                "testingNinja/testingNinja.js"
+            ],
+            "c/thirdComponent": [
+                "thirdComponent/thirdComponent.js"
+            ],
+            "c/utilsJs": [
+                "utilsJs/utilsJs.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

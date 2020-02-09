@@ -1,0 +1,8 @@
+<aura:component>
+    <aura:attribute name="Greeting" type="String" default="Welcome to India" />
+    
+    <h2> I am from LWC</h2>
+    {!v.Greeting}
+    <c:contactListDemo />
+    <c:parentPaginator onnext="{!c.handleNext}" onprevious="{!c.handlePrev}" />
+</aura:component>
